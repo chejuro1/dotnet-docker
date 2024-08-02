@@ -24,6 +24,7 @@ jobs:
         run: |
           cd samples/aspnetapp
           dotnet --version
+          dotnet --info
           docker build -t ${{ secrets.DOCKER_USERNAME }}/dotnet:${{ github.sha }} .
 
       # Push the Docker image to Docker Hub
