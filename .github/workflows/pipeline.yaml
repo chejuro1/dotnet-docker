@@ -66,3 +66,4 @@ jobs:
       - name: Deploy to AKS
         run: |
           kubectl apply -f kubernetes
+          kubectl get  all 
