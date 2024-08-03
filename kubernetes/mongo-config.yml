@@ -1,0 +1,10 @@
+
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: mongo-config
+# data:
+#   MONGODBURI: mongodb://mongo-service.default.svc.cluster.local
+#   MONGODBDATABASE: MONGODB_DATABASE
+
+# ##

@@ -1,0 +1,53 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: api
+#   labels:
+#     app: api
+# spec:
+#   replicas: 3
+#   selector:
+#     matchLabels:
+#       app: api
+#   template:
+#     metadata:
+#       labels:
+#         app: api
+#     spec:
+#       containers:
+#       - name: api
+#         image: "containerregistrydevchejuro.azurecr.io/api:1011"
+#         ports:
+#         - containerPort: 5000
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docker-docker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-docker
+  template:
+    metadata:
+      labels:
+        app: docker-docker
+    spec:
+      containers:
+        - name: docker-docker
+          image: docker.io/chejuro/dotnet:latest
+          ports:
+            - containerPort: 8080
+          # env:
+          #   - name: MONGODB_URI
+          #     valueFrom:
+          #       configMapKeyRef:
+          #         name: mongo-config
+          #         key: MONGODBURI
+          #   - name: MONGODB
+          #     valueFrom:
+          #       configMapKeyRef:
+          #         name: mongo-config
+          #         key: MONGODBDATABASE
+             
+      
