@@ -67,3 +67,4 @@ jobs:
         run: |
           kubectl apply -f kubernetes
           kubectl get  all 
+          kubectl describe svc docker-dotnet
