@@ -68,3 +68,4 @@ jobs:
           kubectl apply -f kubernetes
           kubectl get  all 
           kubectl describe svc docker-dotnet
+          kubectl delete deploy mongo
